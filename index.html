@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Analizador Clínico Sistémico</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+
+let clave="ips2026"
+
+let acceso=prompt("Ingrese clave de acceso")
+
+if(acceso!==clave){
+document.write("Acceso restringido")
+throw new Error("Acceso bloqueado")
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Analizador Clínico Sistémico</h2>
+
+<label>Sección del proceso terapéutico</label>
+
+<select id="seccion">
+<option>Primera consulta</option>
+<option>Seguimiento terapéutico</option>
+<option>Proceso terapéutico avanzado</option>
+<option>Cierre o consolidación del proceso</option>
+</select>
+
+<label>Motivo de consulta</label>
+<textarea id="motivo" rows="4"></textarea>
+
+<label>Datos relevantes del caso</label>
+<textarea id="datos" rows="6"></textarea>
+
+<button onclick="generarAnalisis()">Generar análisis</button>
+
+<div id="resultado"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
